@@ -10,7 +10,7 @@ const RunDetails = ({ run }) => {
     const {dispatch} = useRunContext()
 
     const handleClick = async () => {
-        const response = await fetch('api/runs/' + run._id,{
+        const response = await fetch('https://treadmill-tracker-backend.onrender.com/api/runs/' + run._id,{
             method: 'DELETE'
         })
 
