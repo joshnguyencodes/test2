@@ -9,7 +9,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchRuns = async () => {
-            const response = await fetch('/api/runs')
+            const response = await fetch('https://treadmill-tracker-backend.onrender.com/api/runs')
             const json = await response.json()
 
             if (response.ok) {
