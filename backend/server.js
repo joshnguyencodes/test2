@@ -3,12 +3,16 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const runRoute = require('./routes/run')
+const cors = require('cors')
 
 // create express app
 const app = express()
 
 // middleware
 app.use(express.json()) // parse json data to update/input runs
+
+// allow cors
+app.use(cors())
 
 app.use((req, res, next) => {
     console.log(req.path, req.method)
