@@ -13,7 +13,7 @@ const RunForm = () => {
 
         const run = {date, distance, speed}
 
-        const response = await fetch('/api/runs', {
+        const response = await fetch('https://treadmill-tracker-backend.onrender.com/api/runs', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
